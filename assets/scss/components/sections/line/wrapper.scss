@@ -1,0 +1,65 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.ua {
+  background-color: rgba(2, 0, 80, 0.5);
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+}
+
+.ua::before,
+.ua::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  top: 0;
+  background: linear-gradient(
+    to right,
+    rgba(2, 0, 80, 0.5) 0%,
+    rgba(2, 0, 80, 0.2) 70%,
+    rgba(2, 0, 80, 0) 100%
+  );
+}
+
+.ua::before {
+  left: 0;
+  z-index: 1;
+}
+
+.ua::after {
+  right: 0;
+  z-index: 1;
+  transform: rotate(180deg);
+}
+
+.ua-slog {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: slideshow 20s linear infinite;
+}
+
+.ua-slog__vin {
+  color: yellow;
+  height: 20px;
+  padding: auto;
+  padding-left: 200px;
+  margin: auto;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@keyframes slideshow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

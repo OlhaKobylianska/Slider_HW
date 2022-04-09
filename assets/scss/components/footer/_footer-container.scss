@@ -1,0 +1,76 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+// .footer-container {
+//   display: flex;
+//   align-items: center;
+//   flex-direction: column;
+//   justify-content: center;
+
+//   margin-top: 1px;
+
+//   @extend %container;
+
+//   &__logo {
+//     position: relative;
+
+//     display: grid;
+
+//     margin-bottom: $gap-x2;
+
+//     color: white;
+
+//     grid-template-columns: repeat(5, 1fr);
+
+//     &::after {
+//       position: absolute;
+//       bottom: -$gap;
+//       left: calc(50% - 75px / 2);
+
+//       width: 75px;
+//       height: 2px;
+
+//       content: "";
+
+//       background-color: rgba(255, 255, 255, 0.1);
+//     }
+
+//     a {
+//       display: block;
+
+//       padding: $gap-sm;
+//     }
+
+//     .fab--style {
+//       width: 31.5px;
+//       margin-top: -1px;
+
+//       transition: all 0.5s;
+
+//       font-size: 36px;
+
+//       &:hover {
+//         color: #d66926;
+//       }
+//     }
+//   }
+
+//   &__text {
+//     text-align: center;
+//     letter-spacing: 0.05em;
+
+//     color: rgba($color-light, 0.9);
+
+//     font-weight: 700;
+
+//     &--diff {
+//       margin-right: -0.5em;
+
+//       letter-spacing: 0.33em;
+
+//       color: rgba(140, 155, 171, 0.6);
+
+//       font-weight: 100;
+//     }
+//   }
+// }

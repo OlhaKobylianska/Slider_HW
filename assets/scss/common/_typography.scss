@@ -1,0 +1,112 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  text-transform: none;
+  color: inherit;
+}
+
+
+
+// html {
+//   overflow-y: scroll;
+
+//   letter-spacing: 0.1em;
+
+//   font-family: $font-main;
+//   font-size: $font-size;
+// }
+
+// h1 {
+//   text-align: center;
+//   letter-spacing: 0.08em;
+
+//   color: $color-light;
+
+//   font-family: $font-header;
+//   font-weight: 300;
+
+//   @include lg-min {
+//     font-size: 3.75rem;
+//   }
+//   @include lg-md {
+//     font-size: 2.5rem;
+//   }
+//   @include md {
+//     font-size: 1.875rem;
+//   }
+// }
+
+// h2 {
+//   margin: 0;
+
+//   letter-spacing: 0.1em;
+
+//   color: $color-primary;
+
+//   font-family: $font-header;
+//   line-height: 1.2em;
+// }
+
+
+
+
+
+
+/* h1{
+  font-size: 3rem;
+  font-family: "Oswald";
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color:rgba(255, 255, 255, 1);
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  text-shadow: 3px -3px 10px rgba(0, 0, 0, 0.6);
+  text-align: center;
+} */
+
+
+
+.wrapper {
+  position: fixed;
+  width: inherit;
+  max-width: 100%;
+  padding: 0;
+  bottom: 0;
+  z-index: 500;
+}
+
+/* .ua{
+  height: 50px;
+  max-width: 1600px;
+  position: fixed;
+  bottom: 0;
+  color: red;
+  overflow: hidden;
+} */
+
+
+
+
+
+.section-info{
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.section-info a,
+.section-info span{
+  text-transform: uppercase;
+}

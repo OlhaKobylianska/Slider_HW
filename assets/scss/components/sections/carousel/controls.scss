@@ -1,0 +1,127 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.controls {
+  /* display: flex;
+  justify-content: center;
+  gap: 1em; */
+  margin-top: 1em;
+}
+
+.control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 60px;
+height: 100%; */
+  cursor: pointer;
+  user-select: none;
+  z-index: 100;
+  opacity: 0;
+}
+
+.control--pause span {
+  position: absolute;
+  opacity: 0;
+}
+.control--play span {
+  position: absolute;
+  opacity: 0;
+}
+
+.control--next {
+  position: absolute;
+  bottom: 20px;
+  /* top: 0; */
+  right: 0;
+
+  width: 600px;
+  height: 60px;
+  background-color: rgba(2, 0, 80, 0.1);
+  opacity: 1;
+
+
+  @include lg-min{
+    width: 340px;
+  }
+
+  @include xl-lg{
+    width: 240px;
+  }
+
+  @include lg-md{
+    width: 140px;
+  }
+
+  @include md{
+    width: 60px;
+  }
+  @include sm{
+    bottom: -60px
+  }
+}
+
+.control--prev {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+
+  width: 600px;
+  height: 60px;
+  background-color: rgba(2, 0, 80, 0.1);
+  opacity: 1;
+
+  @include lg-min{
+    width: 340px;
+  }
+
+  @include xl-lg{
+    width: 240px;
+  }
+
+  @include lg-md{
+    width: 140px;
+  }
+
+  @include md{
+    width: 60px;
+  }
+  @include sm{
+    bottom: -60px
+  }
+}
+
+.control--pause {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  top: 30%;
+  left: 35%;
+}
+
+/* .carousel:hover .control--prev,
+.carousel:hover .control--next,
+.carousel:hover .control--pause{
+  opacity: 1;;
+} */
+
+.control--prev:hover {
+  background-color: rgba(2, 0, 80, 0.2);
+}
+
+.control--next:hover {
+  background-color: rgba(2, 0, 80, 0.2);
+}
+
+.control--pause:hover {
+  opacity: 1;
+}
+.control--play:hover {
+  opacity: 1;
+}
+
+.fa-circle-pause,
+.fa-circle-play {
+  font-size: 10rem;
+  color: rgba(255, 255, 255, 0.5);
+}

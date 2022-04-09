@@ -1,0 +1,30 @@
+@use "../../libs/normalize.css/normalize";
+
+@use "common/typography";
+@use "common/classes";
+
+@use "components/header/header";
+@use "components/header/header-menu";
+@use "components/header/header-logo";
+@use "components/header/header-burger.scss";
+
+@use "components/sections/carousel/carousel.scss";
+@use "components/sections/carousel/slides.scss";
+@use "components/sections/carousel/indicators.scss";
+@use "components/sections/carousel/controls.scss";
+
+
+
+
+// @use "components/sections/skills/skills";
+// @use "components/sections/skills/skill-item";
+// @use "components/sections/about/about";
+// @use "components/sections/about/about-container";
+// @use "components/sections/form/form";
+// @use "components/sections/form/form-container";
+// @use "components/sections/post/post";
+// @use "components/sections/post/post-container";
+// @use "components/sections/post/post-item";
+@use "components/footer/footer";
+// @use "components/footer/footer-container";
+

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Подключаем наш основной стиль, с которым будем работать -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Oswald:wght@200;300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Moment</title>
+</head>
+
+<body>
+
+  <header class="container container--header">
+    <div class="header-logo"><a href="" class="header-logo__link">
+        <div class="header-logo__main">M<img class="header-logo__main-img" src="assets/img/png/mountains.png"
+            alt="png">ment</div>
+      </a></div>
+
+
+    <nav class="header-navbar">
+
+      <div class="burger-menu">
+        <div>
+          <a href="" class="burger-menu__button">
+            <span class="burger-menu__lines"></span>
+          </a>
+        </div>
+
+        <div class="burger-menu__nav">
+          <a href="" class="burger-menu__link">Гарячі тури</a>
+          <a href="" class="burger-menu__link">Всі тури</a>
+          <a href="" class="burger-menu__link">Акційні тури</a>
+          <a href="" class="burger-menu__link">Країни</a>
+          <a href="" class="burger-menu__link">Контакти</a>
+        </div>
+        <div class="burger-menu__overlay"></div>
+      </div>
+
+
+
+
+      <ul class="header__menu">
+        <li class="header__menu-text header__menu-text--one"><a href="">Гарячі тури</a></li>
+        <li class="header__menu-text header__menu-text--two"><a href="">Всі тури</a></li>
+        <li class="header__menu-text header__menu-text--three"><a href="">Акційні тури</a></li>
+        <li class="header__menu-text header__menu-text--four"><a href="">Країни</a></li>
+        <li class="header__menu-text header__menu-text--five"><a href="">Контакти</a></li>
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <main class="container-main main">
+
+    <div id="carousel" class="carousel slider">
+      <div id="slides-container" class="slides">
+        <div class="slide item active">Slide 1</div>
+        <div class="slide item">Slide 2</div>
+        <div class="slide item">Slide 3</div>
+        <div class="slide item">Slide 4</div>
+        <div class="slide item">Slide 5</div>
+      </div>
+    </div>
+
+  </main>
+  <footer class="container-main container-main--footer">
+
+  </footer>
+
+
+
+  <!-- Подключаем наш основной скрипт, с которым будем работать -->
+  <!-- <script src="assets/js/basic-carousel.js"></script>
+  <script src="assets/js/advanced-carousel.js"></script> -->
+  <script src="assets/js/main.js" type="module"></script>
+  <script src="assets/js/burger.js"></script>
+
+</body>
+
+</html>

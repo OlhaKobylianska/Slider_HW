@@ -1,0 +1,196 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+
+.header__menu {
+  width: 100%;
+  height: $gap-x6;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: $gap-x4;
+  @include unlist;
+
+  @include ul-xl{
+    gap: $gap-x2;
+  }
+
+  @include xl-lg{
+    gap: $gap-lg;
+  }
+
+  @include lg{
+    gap: 20px;
+  }
+  @include md{
+    display: none;
+  }
+
+  &-text {
+    font-size: $font-size * 1.5;
+    font-family: $font-header;
+    font-weight: 400;
+    color: rgba($color-dark, 0.9);
+
+    margin-top: $gap-x4;
+    text-transform: uppercase;
+
+ 
+    @include xl-lg{
+      font-size: $font-size * 1.1;
+      margin-top: $gap-x4;
+      font-weight: 500;
+    }
+
+    @include lg{
+      font-size: 0.8rem;
+      margin-top: $gap-x2;
+      font-weight: 500;
+    }
+
+    &:hover {
+      color: rgba($color-primary, 0.9);
+      font-weight: 600;
+      @include margin-rl(-4px, -2px);
+
+      @include xl{
+        @include margin-rl(-1px, -1px);
+     }
+    }
+
+    &--one:hover ::after {
+      @include underline-position(150px, 440px);
+
+      @include ul-min{
+        left: 380px;
+     }
+      @include ul-xl{
+         left: 260px;
+      }
+      @include xl-lg{
+        width: 120px;
+        left: 230px;
+     }
+     @include lg-md{
+      width: 80px;
+      left: 175px;
+      top: $gap-x6;
+   }
+    }
+
+    &--two:hover {
+      @include margin-rl(-2px, -2.2px);
+
+      @include xl-lg{
+        @include margin-rl(-1px, -1px);
+     }
+     @include lg{
+      @include margin-rl(-0.6px, -0.6px);
+   }
+
+
+      ::after {
+        @include underline-position(110px, 640px);
+        
+        @include ul-min{
+          left: 580px;
+       }
+        @include ul-xl{
+          left: 425px;
+       }
+       @include xl-lg{
+        width: 80px;
+        left: 355px;
+     }
+     @include lg-md{
+      width: 60px;
+      left: 265px;
+      top: $gap-x6;
+   }
+      }
+
+    }
+
+    &--three:hover {
+      @include margin-rl(-3px, -5px);
+      @include xl-lg{
+        @include margin-rl(-2px, -1px);
+     }
+
+
+      ::after {
+        @include underline-position (170px, 790px);
+       
+        @include ul-min{
+          left: 730px;
+       }@include ul-xl{
+          left: 545px;
+       }
+       @include xl-lg{
+        width: 120px;
+        left: 450px;
+     }
+     @include lg-md{
+      width: 90px;
+      left: 335px;
+      top: $gap-x6;
+   }
+      }
+    }
+
+    &--four:hover {
+      @include margin-rl(-2.25px, -1.25px);
+      @include xl-lg{
+        @include margin-rl(-1px, -1px);
+     }
+     @include lg{
+      @include margin-rl(-0.5px, -0.5px);
+   }
+
+
+      ::after {
+        @include underline-position (100px, 1005px);
+              
+        @include ul-min{
+          left: 940px;
+       }
+        @include ul-xl{
+          left: 725px;
+       }
+       @include xl-lg{
+        width: 70px;
+        left: 590px;
+        
+     }
+     @include lg-md{
+      width: 50px;
+      left: 440px;
+      top: $gap-x6;
+   }
+      }
+    }
+    
+    &--five:hover ::after {
+      @include underline-position (120px, 1155px);
+     
+      @include ul-min{
+        left: 1090px;
+     }
+      @include ul-xl{
+        left: 840px;
+     }
+     @include xl-lg{
+      width: 90px;
+      left: 670px;
+      
+   }
+   @include lg-md{
+    width: 70px;
+    left: 500px;
+    top: $gap-x6;
+ }
+    }
+  }
+}
+
+

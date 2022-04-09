@@ -1,0 +1,65 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.footer-block {
+  height: 150px;
+  width: 100%;
+  background-color: rgba(2, 0, 80, 0.1);
+}
+
+.footer-logo__block {
+  height: auto;
+  width: 100%;
+ }
+
+.footer-block::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  width: 100%;
+  height: 3px;
+
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 500;
+}
+
+
+
+
+
+.header-logo--footer {
+  width: 20%;
+  height: 2rem;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.header-logo__main--footer {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+.header-logo__main-img--footer {
+  width: 1.7rem;
+}
+
+
+.footer-block__pos{
+  display: flex;
+  padding: 20px;
+ }
+
+.footer-menu{
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  gap: 10rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.12em;
+ 
+  
+}
