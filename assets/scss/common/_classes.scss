@@ -17,13 +17,12 @@
   width: 80%;
   margin: 0 auto;
   height: 880px;
+  @include md{
+    height: 600px;
+  }
+}
+}
 
-
-&--footer {
-  height: auto;
-}
-}
-}
 
 // .btn {
 //   display: flex;

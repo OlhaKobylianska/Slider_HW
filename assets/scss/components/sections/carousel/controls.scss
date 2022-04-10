@@ -104,4 +104,9 @@
 .fa-circle-play {
   font-size: 10rem;
   color: rgba(255, 255, 255, 0.5);
+  @include md{
+    font-size: 6rem;
+
+
+  }
 }
