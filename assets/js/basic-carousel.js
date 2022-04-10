@@ -47,6 +47,11 @@ class Carousel {
     this.pauseIcon = this.container.querySelector('#fa-pause-icon');
     this.playIcon = this.container.querySelector('#fa-play-icon');
 
+    this.menu = document.querySelector('.burger-menu')
+this.button = document.querySelector('.burger-menu__button')
+this.links = document.querySelector('.burger-menu__link')
+this.overlay = document.querySelector('.burger-menu__overlay')
+
     this.isPlaying ? this._pauseVisible() : this._playVisible();
   };
 
@@ -77,6 +82,10 @@ class Carousel {
     this.indicatorsContainer.addEventListener('click', this._indicate.bind(this));
     this.pauseBtn.addEventListener('mouseenter', this._pause.bind(this));
     this.pauseBtn.addEventListener('mouseleave', this._play.bind(this));
+
+    this.button.addEventListener('click', this._toggleChange.bind(this));
+    this.links.addEventListener('click', this._toggleChange.bind(this));
+    this.overlay.addEventListener('click', this._toggleChange.bind(this));
 
     document.addEventListener('keydown', this._pressKey.bind(this));
   };
@@ -169,12 +178,23 @@ class Carousel {
     this.timerId = setInterval(() => this._gotoNext(), this.interval);
   };
 
+  _toggleActive(){
+    this.menu.classList.toggle('burger-menu__active')
+  }
+
+ _toggleChange(e) {
+    e.preventDefault();
+    this._toggleActive();
+    };
+
   init() {
     this._initProps();
     this._initControls();
     this._initIndicators();
     this._initListeners();
     this._tick(this.isPlaying);
+
+    // this._burgerDo();
 
   }
 };
