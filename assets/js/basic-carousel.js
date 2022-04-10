@@ -8,6 +8,8 @@ class Carousel {
 
     this.interval = settings.interval;
     this.isPlaying = settings.isPlaying;
+
+    this.slidesContainer = document.querySelector('#slides');
   }
 
   _initProps() {
@@ -26,7 +28,6 @@ class Carousel {
 
   _initControls() {
     const controls = document.createElement('div');
-    
     const PAUSE = `<span class="control control--pause" id="pause-btn">
     <span id="fa-pause-icon">${this.FA_PAUSE}</span>
     <span id="fa-play-icon">${this.FA_PLAY}</span>
@@ -55,10 +56,12 @@ class Carousel {
 
     for (let i = 0, n = this.SLIDE_COUNT; i < n; i++) {
       const indicator = document.createElement('div');
+
       indicator.setAttribute('class', i !== 0 ? 'indicator' : 'indicator active');
       indicator.dataset.slideTo = `${i}`;
 
       indicators.append(indicator);
+      
     }
 
     this.container.append(indicators);
@@ -72,8 +75,8 @@ class Carousel {
     this.prevBtn.addEventListener('click', this.prev.bind(this));
     this.nextBtn.addEventListener('click', this.next.bind(this));
     this.indicatorsContainer.addEventListener('click', this._indicate.bind(this));
-    this.container.addEventListener('mouseenter', this._pause.bind(this));
-    this.container.addEventListener('mouseleave', this._play.bind(this));
+    this.pauseBtn.addEventListener('mouseenter', this._pause.bind(this));
+    this.pauseBtn.addEventListener('mouseleave', this._play.bind(this));
 
     document.addEventListener('keydown', this._pressKey.bind(this));
   };
@@ -85,6 +88,10 @@ class Carousel {
     this.currentSlide = (n + this.SLIDE_COUNT) % this.SLIDE_COUNT;
     this.slides[this.currentSlide].classList.toggle('active');
     this.indicators[this.currentSlide].classList.toggle('active');
+
+    if (this.isPlaying){
+      this._notVisible(); 
+    }
   };
 
   _gotoNext() {
@@ -111,10 +118,18 @@ class Carousel {
     }
   };
 
+  _notVisible() {
+    if (this._pauseVisible) {
+    this.pauseIcon.style.opacity = 0;
+    this.playIcon.style.opacity = 0;
+    }
+  }
+
   _pauseVisible(isVisible = true) {
     (isVisible) ? this.pauseIcon.style.opacity = 1 : this.pauseIcon.style.opacity = 0;
     (!isVisible) ? this.playIcon.style.opacity = 1 : this.playIcon.style.opacity = 0;
   }
+  
 
   _playVisible() {
     this._pauseVisible(false);

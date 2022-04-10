@@ -571,7 +571,7 @@ a {
 .burger-menu__button {
   display: block;
   position: fixed;
-  top: 25px;
+  top: 40px;
   right: 10%;
   z-index: 1000;
   width: 50px;
@@ -639,7 +639,7 @@ a {
 }
 
 .burger-menu__nav {
-  padding-top: 80px;
+  padding-top: 100px;
   position: fixed;
   top: 0;
   z-index: 950;
@@ -668,6 +668,12 @@ a {
   text-transform: uppercase;
   letter-spacing: 5px;
   color: black;
+  z-index: 10000;
+}
+.burger-menu__link--text {
+  font-weight: 600;
+  padding: 20px;
+  text-align: center;
 }
 
 .burger-menu__link:hover {
@@ -739,10 +745,6 @@ main {
 .slide__link {
   display: block;
   position: relative;
-  padding: 20px;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
 }
 
 .slide__link-text {
@@ -759,7 +761,7 @@ main {
   font-size: 2rem;
 }
 
-.slide__link-info {
+.slide__info {
   position: absolute;
   left: 0;
   right: 0;
@@ -769,12 +771,14 @@ main {
   background-color: rgba(255, 255, 255, 0.5);
   overflow: hidden;
   opacity: 0;
-  /* display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4; */
+  z-index: 5000;
 }
 
-.slide__link-info__text {
+.slide__info-active {
+  opacity: 1;
+}
+
+.slide__info-text {
   height: 145px;
   font-family: "Open Sans", sans-serif;
   color: rgba(0, 0, 0, 0.7);
@@ -786,10 +790,7 @@ main {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
-}
-
-.slide:hover .slide__link-info {
-  opacity: 300;
+  z-index: 5000;
 }
 
 .slide:nth-of-type(1) {
@@ -842,14 +843,9 @@ main {
   gap: 1em;
   position: absolute;
   bottom: 30px;
-  right: 10%;
-  left: 10%;
+  width: 100%;
 }
 
-/* .indicators{
-  position: absolute;
-  bottom: 0;
-} */
 .indicator {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -875,9 +871,6 @@ main {
 }
 
 .controls {
-  /* display: flex;
-  justify-content: center;
-  gap: 1em; */
   margin-top: 1em;
 }
 
@@ -891,32 +884,26 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* width: 60px;
-  height: 100%; */
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   z-index: 100;
-  opacity: 0;
   user-select: none;
 }
 
 .control--pause span {
   position: absolute;
-  opacity: 0;
 }
 
 .control--play span {
   position: absolute;
-  opacity: 0;
 }
 
 .control--next {
   position: absolute;
   bottom: 20px;
-  /* top: 0; */
   right: 0;
   width: 600px;
   height: 60px;
@@ -936,31 +923,18 @@ main {
 
 .control--pause {
   position: absolute;
-  width: 30%;
-  height: 30%;
-  top: 30%;
-  left: 35%;
+  width: 100%;
+  height: 84%;
+  inset: 0;
+  top: 7%;
 }
 
-/* .carousel:hover .control--prev,
-.carousel:hover .control--next,
-.carousel:hover .control--pause{
-  opacity: 1;;
-} */
 .control--prev:hover {
   background-color: rgba(2, 0, 80, 0.2);
 }
 
 .control--next:hover {
   background-color: rgba(2, 0, 80, 0.2);
-}
-
-.control--pause:hover {
-  opacity: 1;
-}
-
-.control--play:hover {
-  opacity: 1;
 }
 
 .fa-circle-pause,
@@ -1219,6 +1193,7 @@ main {
     max-width: 500px;
     margin: 0;
     margin-left: 10%;
+    padding-top: 40px;
   }
   .container--header::after {
     display: none;
@@ -1228,6 +1203,9 @@ main {
   }
   .burger-menu {
     display: block;
+  }
+  .indicator {
+    border-right: 1px solid white;
   }
   .control--next {
     width: 60px;
