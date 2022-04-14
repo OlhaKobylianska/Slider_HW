@@ -192,6 +192,9 @@ this.overlay = document.querySelector('.burger-menu__overlay')
     this._initControls();
     this._initIndicators();
     this._initListeners();
+
+   this._notVisible()
+
     this._tick(this.isPlaying);
 
     // this._burgerDo();

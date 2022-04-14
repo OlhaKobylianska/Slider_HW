@@ -90,6 +90,10 @@
   height: 84%;
   inset: 0;
   top: 7%;
+
+  @include md{
+    height: 76%;
+  }
 }
 
 .control--prev:hover {
@@ -106,7 +110,5 @@
   color: rgba(255, 255, 255, 0.5);
   @include md{
     font-size: 6rem;
-
-
   }
 }
