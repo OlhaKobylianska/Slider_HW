@@ -2,6 +2,13 @@
 @use "../../mixins" as *;
 
 .container {
+  position: relative;
+  max-width: 1280px;
+  padding: 20px 2rem 20px 2rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
   &--header {
     width: 100%;
     height: $gap * 12;
@@ -22,10 +29,8 @@
     @include lg-md {
       max-width: 600px;
     }
-    @include md{
+    @include md {
       max-width: 500px;
-  // justify-content: center;
-
       margin: 0;
       margin-left: 10%;
       padding-top: 40px;
@@ -36,7 +41,7 @@
       margin: 0;
     }
 
-    @include lg{
+    @include lg {
       height: $gap * 8;
     }
 
@@ -45,12 +50,12 @@
       right: 0;
       z-index: 100;
 
-      @include lg-md{
-      top: $gap-x6;
+      @include lg-md {
+        top: $gap-x6;
       }
-      @include md{
+      @include md {
         display: none;
-     }
+      }
     }
   }
 }

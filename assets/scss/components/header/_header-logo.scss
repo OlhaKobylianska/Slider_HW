@@ -6,37 +6,36 @@
     width: 15%;
     height: $gap-x4;
 
-    @include md-xs{
+    @include md-xs {
       width: 20%;
       margin-left: -25%;
-      
     }
 
-    @include xs{
+    @include xs {
       width: 30%;
     }
 
-    &__link {
+    &-link {
       display: block;
-    }
 
-    &__main {
-      font-size: $size-4x;
-      font-family: $font-main;
-      font-weight: 500;
-      color: rgba($color-dark, 0.7);
+      &__wrapper {
+        font-size: $size-4x;
+        font-family: $font-main;
+        font-weight: 500;
+        color: rgba($color-dark, 0.7);
 
-      letter-spacing: 0.1em;
-      line-height: 0.1;
+        letter-spacing: 0.1em;
+        line-height: 0.1;
 
-      @include lg{
-        font-size: $size-2x;
-      }
+        @include lg {
+          font-size: $size-2x;
+        }
 
-      &-img {
-        width: $gap-x4;
-        @include lg{
-          width: $gap-x2;
+        &-img {
+          width: $gap-x4;
+          @include lg {
+            width: $gap-x2;
+          }
         }
       }
     }
