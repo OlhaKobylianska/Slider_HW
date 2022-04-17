@@ -11,10 +11,9 @@
 }
 
 .indicator {
-  display: flex;
+  @extend %flex-center;
   justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba($color-dark, 0.2);
   width: 40px;
   height: 10px;
 
@@ -22,10 +21,10 @@
   user-select: none;
 
   @include md {
-    border-right: 1px solid white;
+    border-right: 1px solid $color-light;
   }
 
-  .active {
-    background-color: rgba(2, 0, 80, 1);
+  &.active {
+    background-color: $color-primary;
   }
 }

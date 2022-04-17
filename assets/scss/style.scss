@@ -1,7 +1,6 @@
 @use "../../libs/normalize.css/normalize";
 
 @use "common/typography";
-@use "common/classes";
 
 @use "components/header/header";
 @use "components/header/header-menu";
@@ -15,7 +14,7 @@
 @use "components/main/carousel/indicators.scss";
 @use "components/main/carousel/controls.scss";
 
-@use "components/footer/footer";
-@use "components/footer/wrapper.scss";
+@use "components/footer/footer-container";
+@use "components/footer/wrapper";
 
 

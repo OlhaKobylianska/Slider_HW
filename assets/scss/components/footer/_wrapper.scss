@@ -1,5 +1,5 @@
-@use "../../../presets" as *;
-@use "../../../mixins" as *;
+@use "../../presets" as *;
+@use "../../mixins" as *;
 
 .wrapper {
   position: fixed;
@@ -11,12 +11,11 @@
 }
 
 .ua {
-  background-color: rgba(2, 0, 80, 0.5);
-  display: flex;
-  align-items: center;
+  background-color: rgba($color-primary, 0.5);
+  @extend %flex-center;
   position: relative;
   width: 100%;
-  height: 30px;
+  height: $gap-x2;
   overflow: hidden;
 
   &::before,
@@ -28,9 +27,9 @@
     top: 0;
     background: linear-gradient(
       to right,
-      rgba(2, 0, 80, 0.5) 0%,
-      rgba(2, 0, 80, 0.2) 70%,
-      rgba(2, 0, 80, 0) 100%
+      rgba($color-primary, 0.5) 0%,
+      rgba($color-primary, 0.2) 70%,
+      rgba($color-primary, 0) 100%
     );
   }
   &::before {
@@ -45,16 +44,15 @@
 
   &-slog {
     height: inherit;
-    display: flex;
-    align-items: center;
+    @extend %flex-center;
     white-space: nowrap;
     animation: slideshow 20s linear infinite;
 
     &__win {
-      color: yellow;
-      height: 20px;
+      color: $color-other;
+      height: $gap-x2;
       padding: auto;
-      padding-left: 200px;
+      padding-left: $gap-lg * 10;
       margin: auto;
       display: inline-block;
       white-space: nowrap;

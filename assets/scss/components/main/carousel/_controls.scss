@@ -6,9 +6,8 @@
 }
 
 .control {
-  display: flex;
+  @extend %flex-center;
   justify-content: center;
-  align-items: center;
   cursor: pointer;
   user-select: none;
   z-index: 100;
@@ -21,11 +20,12 @@
 
     width: 600px;
     height: 60px;
-    background-color: rgba(2, 0, 80, 0.1);
+    background-color: rgba($color-primary, 0.1);
     opacity: 1;
 
     &:hover {
-      background-color: rgba(2, 0, 80, 0.2);
+      background-color: rgba($color-primary, 0.2);
+      @include transition;
     }
 
     @include lg-min {
@@ -55,11 +55,11 @@
 
     width: 600px;
     height: 60px;
-    background-color: rgba(2, 0, 80, 0.1);
+    background-color: rgba($color-primary, 0.1);
     opacity: 1;
 
     &:hover {
-      background-color: rgba(2, 0, 80, 0.2);
+      background-color: rgba($color-primary, 0.2);
     }
 
     @include lg-min {

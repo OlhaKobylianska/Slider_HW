@@ -53,7 +53,7 @@
   list-style: none;
 }
 
-@mixin abs-position ($top: 0, $right: 0, $bottom: 0, $left: 0) {
+@mixin abs-position($top: 0, $right: 0, $bottom: 0, $left: 0) {
   position: absolute;
   top: $top;
   right: $right;
@@ -65,12 +65,12 @@
   box-shadow: -3px 3px 20px -10px darken($color-gray-dark, 40%);
 }
 
-@mixin margin-rl ($right: 0, $left: 0) {
+@mixin margin-rl($right: 0, $left: 0) {
   margin-right: $right;
   margin-left: $left;
 }
 
-@mixin underline-position ($width: 0, $left: 0, $color: $color-primary) {
+@mixin underline-position($width: 0, $left: 0, $color: $color-primary) {
   content: "";
   position: absolute;
   bottom: 0;
@@ -80,4 +80,8 @@
 
   width: $width;
   left: $left;
+}
+
+@mixin transition($that: all) {
+  transition: $that 0.5s;
 }
