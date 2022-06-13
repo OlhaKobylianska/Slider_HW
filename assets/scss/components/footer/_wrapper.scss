@@ -46,12 +46,12 @@
     height: inherit;
     @extend %flex-center;
     white-space: nowrap;
+    padding-top: 8px;
     animation: slideshow 20s linear infinite;
 
     &__win {
       color: $color-other;
       height: $gap-x2;
-      padding: auto;
       padding-left: $gap-lg * 10;
       margin: auto;
       display: inline-block;

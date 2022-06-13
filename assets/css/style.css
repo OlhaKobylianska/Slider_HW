@@ -672,7 +672,6 @@ main {
   color: rgba(0, 0, 0, 0.7);
   font-size: 1.4rem;
   line-height: 1.8rem;
-  letter-spacing: 0.8;
   letter-spacing: 0.06em;
   overflow: hidden;
   display: -webkit-box;
@@ -865,13 +864,13 @@ main {
 .block-slog {
   height: inherit;
   white-space: nowrap;
+  padding-top: 8px;
   -webkit-animation: slideshow 20s linear infinite;
           animation: slideshow 20s linear infinite;
 }
 .block-slog__win {
   color: #ffff00;
   height: 32px;
-  padding: auto;
   padding-left: 240px;
   margin: auto;
   display: inline-block;
