@@ -348,7 +348,7 @@ template {
 /* sm */
 /* xs */
 /* xx */
-.ua, .ua-slog, .control, .indicator {
+.block, .block-slog, .control, .indicator {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -682,35 +682,30 @@ main {
 }
 .slide:nth-of-type(1) {
   background-color: red;
-  background-image: url(../img/jpg/lucas-clara-hvPB-UCAmmU-unsplash.jpg);
   background-position: 50% 50%;
   background-size: cover;
   height: 100%;
 }
 .slide:nth-of-type(2) {
   background: orange;
-  background-image: url(../img/jpg/nor.jpg);
   background-position: 50% 50%;
   background-size: cover;
   height: 100%;
 }
 .slide:nth-of-type(3) {
   background: green;
-  background-image: url(../img/jpg/al.jpg);
   background-position: 50% 50%;
   background-size: cover;
   height: 100%;
 }
 .slide:nth-of-type(4) {
   background: blue;
-  background-image: url(../img/jpg/shri-lanka-min.jpg);
   background-position: 50% 50%;
   background-size: cover;
   height: 100%;
 }
 .slide:nth-of-type(5) {
   background: purple;
-  background-image: url(../img/jpg/gree.jpg);
   background-position: 50% 50%;
   background-size: cover;
   height: 100%;
@@ -839,14 +834,14 @@ main {
   z-index: 500;
 }
 
-.ua {
+.block {
   background-color: rgba(2, 0, 80, 0.5);
   position: relative;
   width: 100%;
   height: 32px;
   overflow: hidden;
 }
-.ua::before, .ua::after {
+.block::before, .block::after {
   content: "";
   position: absolute;
   width: 200px;
@@ -856,24 +851,24 @@ main {
   background: -o-linear-gradient(left, rgba(2, 0, 80, 0.5) 0%, rgba(2, 0, 80, 0.2) 70%, rgba(2, 0, 80, 0) 100%);
   background: linear-gradient(to right, rgba(2, 0, 80, 0.5) 0%, rgba(2, 0, 80, 0.2) 70%, rgba(2, 0, 80, 0) 100%);
 }
-.ua::before {
+.block::before {
   left: 0;
   z-index: 1;
 }
-.ua::after {
+.block::after {
   right: 0;
   z-index: 1;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.ua-slog {
+.block-slog {
   height: inherit;
   white-space: nowrap;
   -webkit-animation: slideshow 20s linear infinite;
           animation: slideshow 20s linear infinite;
 }
-.ua-slog__win {
+.block-slog__win {
   color: #ffff00;
   height: 32px;
   padding: auto;
